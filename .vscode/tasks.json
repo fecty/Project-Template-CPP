@@ -6,12 +6,16 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "g++",            
+            "command": "g++",   
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },         
             "args": [
                 "-static",
                 "-Iinclude",
                 "-Llib",
-                "src/*.cpp",
+                "src/${fileBasenameNoExtension}.cpp",
                 "-o",
                 "bin/${fileBasenameNoExtension}.exe"
             ],
@@ -22,6 +26,10 @@
         {
             "label": "Run",
             "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
             "command": "bin\\${fileBasenameNoExtension}.exe"
         },
         {

@@ -12,10 +12,11 @@
                 "isDefault": true
             },         
             "args": [
+                "-std=c++17",
                 "-static",
                 "-Iinclude",
                 "-Llib",
-                "src/${fileBasenameNoExtension}.cpp",
+                "${relativeFileDirname}/${fileBasenameNoExtension}.cpp",
                 "-o",
                 "bin/${fileBasenameNoExtension}.exe"
             ],

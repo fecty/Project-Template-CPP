@@ -41,7 +41,7 @@ General C++ Project Template Directory. It is meant to be configured according t
 
 ```shell
 cd projectDirectory/
-g++ -static -Iinclude -Llib src/main.cpp -o bin/main.exe
+g++ -std=c++17 -static -Iinclude -Llib src/main.cpp -o bin/main.exe
 ```
 Make sure that `mingw-w64/bin` is included in the `PATH` so that `g++` is available in the cmd. Otherwise navigate manually.
 
